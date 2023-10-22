@@ -4,12 +4,15 @@ pipeline {
             label 'maven'
         }
     }
-
+    environment {
+    PATH = "/opt/apache-maven-3.9.5/bin:$PATH"
+    }
     stages {
-        stage('clone-code') {
-            steps {
-                git branch: 'main', url: 'https://github.com/81611991/yogi-new-ttrend'
+        stage("build"){
+            steps{
+                sh ''
             }
         }
     }
+
 }
